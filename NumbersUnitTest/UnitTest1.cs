@@ -11,7 +11,14 @@ namespace NumbersUnitTest
         {
             Program objTest = new Program();
             Assert.IsTrue(objTest.printDigits(10, 100));
-        } 
+        }
+        [TestMethod]
+        public void It_Should_Return_Prime_True()
+        {
+            Program objTest = new Program();
+            Assert.IsTrue(objTest.printDigitsWithPrimeAsText(10, 100));
+        }
+
 
     }
 }
