@@ -19,7 +19,7 @@ namespace NumbersTest
             sericeStart = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter Ending number in serice");
             sericeEnd = int.Parse(Console.ReadLine());
-            Program objProgram = new Program();
+            Program objProgram = new Program(); 
 
             if (sericetype == 1) { Status = objProgram.printDigits(sericeStart, sericeEnd); }
             if (Status)
