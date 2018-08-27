@@ -10,7 +10,7 @@ namespace NumbersTest
     {
         public delegate void primeDel(int x);
         static void Main(string[] args)
-        {
+        { 
             int sericeStart = 0, sericeEnd = 0;
             bool Status = true;
             Console.WriteLine("Select Serice 1) Print Serice 2) Prime Serice 3) Composite Serice");
