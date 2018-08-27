@@ -22,8 +22,6 @@ namespace NumbersTest
             Program objProgram = new Program();
 
             if (sericetype == 1) { Status = objProgram.printDigits(sericeStart, sericeEnd); }
-            else if (sericetype == 2) { Status = objProgram.printDigitsWithPrimeAsText(sericeStart, sericeEnd); }
-            else if (sericetype == 3) { Status = objProgram.printDigitsWithCompositeAsText(sericeStart, sericeEnd); }
             if (Status)
                 Console.WriteLine("Operation Completed \nPress any key to exit");
             else
@@ -48,49 +46,6 @@ namespace NumbersTest
             {
                 return false;
             }
-
-        }
-        public bool printDigitsWithPrimeAsText(int sericeStart, int sericeEnd)
-        {
-            try
-            {
-                Console.WriteLine("Operation Started");
-                List<int> digits = new List<int>();
-                digits = Enumerable.Range(sericeStart, sericeEnd - sericeStart + 1).ToList();
-                primeDel obj = i => { float flag = 0; for (int j = 1; j <= i; j++) { if (i % j == 0) { flag++; } } if (flag <= 2) { Console.WriteLine("Prime"); } else { Console.WriteLine(i); } };
-
-
-                for (int i = sericeStart; i <= (sericeEnd); i++)
-                {
-                    obj(i);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
-        }
-        public bool printDigitsWithCompositeAsText(int sericeStart, int sericeEnd)
-        {
-            try
-            {
-                Console.WriteLine("Operation Started");
-                List<int> digits = new List<int>();
-                digits = Enumerable.Range(sericeStart, sericeEnd - sericeStart + 1).ToList();
-                primeDel obj = i => { float flag = 0; if (i % 2 == 0) { Console.WriteLine(i); } else { for (int j = 1; j <= i; j++) { if (i % j == 0) { flag++; } } if (flag <= 2) { Console.WriteLine(i); } else { Console.WriteLine("Composite"); } } };
-                for (int i = sericeStart; i <= (sericeEnd); i++)
-                {
-                    obj(i);
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
-        }
+        }      
 }
 }
